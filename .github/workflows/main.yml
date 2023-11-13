@@ -18,7 +18,7 @@ jobs:
       - name: Read Review Guidelines
         id: read-guidelines
         run: |
-          REVIEW_GUIDELINES=$(cat REVIEW_GUIDELINES.md)
+          REVIEW_GUIDELINES=$(cat ANGULAR_REVIEW_GUIDELINES.md)
           echo "::set-output name=review_guidelines::$REVIEW_GUIDELINES"
 
       - name: AI Code Review Action
