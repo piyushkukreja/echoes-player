@@ -30,9 +30,9 @@ export class PlaylistViewerComponent implements OnInit {
   @Output() queuePlaylist = new EventEmitter<GoogleApiYouTubePlaylistResource>();
   @Output() playPlaylist = new EventEmitter<GoogleApiYouTubePlaylistResource>();
   @Output() queueVideo = new EventEmitter<GoogleApiYouTubeVideoResource>();
-  @Output() playVideo = new EventEmitter<GoogleApiYouTubeVideoResource>();
+  @Output() playVedio = new EventEmitter<GoogleApiYouTubeVideoResource>();
   @Output() unqueueVideo = new EventEmitter<GoogleApiYouTubeVideoResource>();
-  @Output() add = new EventEmitter<GoogleApiYouTubeVideoResource>();
+  @Output() addYoutubeRes = new EventEmitter<   GoogleApiYouTubeVideoResource>();
 
   constructor() { }
 

@@ -2,13 +2,20 @@
  * Testing a Service
  * More info: https://angular.io/docs/ts/latest/guide/testing.html
  */
-import { TestBed, inject } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { 
+  TestBed, 
+  inject 
+} from '@angular/core/testing';
+import { 
+  HttpClientModule
+} from '@angular/common/http';
 import { PlayerSearchActions } from '@store/player-search';
 import { YoutubeDataApi } from './youtube-data-api';
 import { YoutubeSearch, SearchTypes } from './youtube.search';
 
-describe('Youtube Search Service', () => {
+describe(
+  'Youtube Search Service', 
+  () => {
   let service: YoutubeSearch;
   let youtubeDataApiSpy: YoutubeDataApi;
 
@@ -30,7 +37,7 @@ describe('Youtube Search Service', () => {
     });
   });
 
-  // instantiation through framework injection
+  //  // instantiation through framework injection
   beforeEach(inject([YoutubeSearch], youtubeSearch => {
     service = youtubeSearch;
   }));
@@ -47,7 +54,7 @@ describe('Youtube Search Service', () => {
   });
 
   it('should search with same value when searching more and trim', () => {
-    const query = 'ozrics';
+    let query = 'ozrics';
     const params = { preset: '' };
     const nextPageToken = 'fdsaf#42441';
     service.search(query, params);

@@ -5,7 +5,12 @@ const HH_MM_SSre = /(\d{1,2}):\d{2}:?\d{0,2}/;
 
 @Injectable()
 export class MediaParserService {
-  constructor() {}
+  constructor() {
+
+
+
+    
+  }
 
   extractTracks(description: string) {
     const hasTracksRegexp = new RegExp(LINE_WITH_TRACKre, 'gmi');
@@ -17,7 +22,7 @@ export class MediaParserService {
     return tracks;
   }
 
-  extractTime(track: string) {
+  extractTime(track: string): any       {
     const title = track.match(HH_MM_SSre);
     return title;
   }
