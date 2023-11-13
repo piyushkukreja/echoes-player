@@ -47,7 +47,7 @@ describe('Youtube Search Service', () => {
   });
 
   it('should search with same value when searching more and trim', () => {
-    const query = 'ozrics';
+    let query = 'ozrics';
     const params = { preset: '' };
     const nextPageToken = 'fdsaf#42441';
     service.search(query, params);
